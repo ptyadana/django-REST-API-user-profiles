@@ -32,7 +32,7 @@ class UserProfileManager(BaseUserManager):
 
         #automatically created by PermissionsMixin
         user.is_superuser = True
-        
+
         user.is_staff = True
         user.save(using=self._db)
 
@@ -56,7 +56,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     #also mark email as required or mandatory field
     USERNAME_FIELD = 'email'
 
-    #explicitly declar fields which are required
+    #explicitly declare fields which are required
     REQUIRED_FIELDS =['name']
 
     def get_full_name(self):
