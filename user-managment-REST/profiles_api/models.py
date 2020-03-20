@@ -49,7 +49,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
-    object = UserProfileManager()
+    objects = UserProfileManager()
 
     #overwrite default username to use email, so that Admin portal will display email and password
     #instad of username and password
